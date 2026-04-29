@@ -313,31 +313,6 @@ heal:
 | mini-orchestrator | Python | 本地执行 + onboarding/billing |
 | mini-ticketing | Java | 工单审批链（提交→评论→审批→通知） |
 | mini-query-engine | C | 查询前端（解析+规划+优化） |
-
-```bash
-python run_benchmark.py     # 全跑
-python _score.py            # F1 评分
-```
-
-### 历史最佳（9/9 通过，2026-04-10）
-
-| Benchmark | P | R | F1 |
-|-----------|---|---|---|
-| blog | 0.933 | 1.000 | **0.966** |
-| compiler | 0.938 | 1.000 | **0.968** |
-| dashboard | 0.909 | 1.000 | **0.952** |
-| etl | 0.941 | 0.941 | **0.941** |
-| framework | 0.938 | 0.938 | **0.938** |
-| orchestrator | 0.947 | 0.900 | **0.923** |
-| query-engine | 0.941 | 0.889 | **0.914** |
-| shop | 0.923 | 0.857 | **0.889** |
-| ticketing | 0.955 | 1.000 | **0.977** |
-| **平均** | **0.936** | **0.947** | **0.941** |
-
-Recall 极高（6/9 为 100%），Precision 是瓶颈（偏保守）。
-
----
-
 ## 项目结构
 
 ```
@@ -382,8 +357,6 @@ D:\CodePrune/
 │   ├── import_resolver.py          #   import 路径
 │   └── lang_rules/                 #   语言规则引擎
 │
-├─ tests/                          # 93 个测试 (1565 行)
-├─ benchmark/                      # 9 个基准项目
 └─ docs/                           # 设计文档
 ```
 
