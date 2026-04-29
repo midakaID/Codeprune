@@ -1,0 +1,29 @@
+llm:
+  provider: openai
+  api_key: 
+  api_base: 
+  timeout: 1000
+  max_retries: 30
+  cache_enabled: true
+  embedding_api_base: 
+  embedding_api_key: 
+  reasoning:
+    model: 
+    temperature: 0.2
+    max_tokens: 16384
+  fast:
+    model: 
+    temperature: 0.3
+    max_tokens: 8192
+
+graph:
+  initial_granularity: function
+  enable_semantic: true
+  embedding_model: text-embedding-3-small
+  embedding_dim: 1536
+
+prune:
+  scope_strategy: llm_hierarchical
+
+heal:
+  max_heal_rounds: 8
